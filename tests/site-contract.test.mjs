@@ -41,6 +41,8 @@ test("layout and progress storage are production ready", async () => {
   ]);
   assert.match(layout, /lang="zh-CN"/);
   assert.match(layout, /grok-build 源码学习驾驶舱/);
+  assert.match(layout, /headers\(\)/);
+  assert.match(layout, /\/og\.png/);
   assert.match(progress, /grok-build-progress:/);
   assert.doesNotMatch(page + layout, /codex-preview|SkeletonPreview/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
