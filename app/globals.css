@@ -151,11 +151,13 @@ main { min-height: calc(100vh - 72px); }
 .lab-stage { border: 1px solid var(--line); background: var(--bench); padding: 24px; min-height: 380px; }
 .lesson-section { padding: 105px 0 0; }
 .section-heading { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 30px; align-items: end; margin-bottom: 34px; }
-.prose-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.prose-grid article { min-height: 255px; padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.prose-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.prose-grid article { min-height: 330px; padding: 32px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.prose-grid article:last-child:nth-child(odd) { grid-column: 1 / -1; min-height: 0; }
 .prose-grid article > span { color: var(--muted); font: 700 9px var(--mono); letter-spacing: .12em; }
-.prose-grid h3 { margin: 55px 0 14px; font: 700 22px var(--display); }
-.prose-grid p { color: var(--muted); margin: 0; font-size: 13px; }
+.prose-grid h3 { margin: 48px 0 16px; font: 700 24px var(--display); }
+.prose-grid p { color: var(--muted); margin: 0; max-width: 72ch; font-size: 14px; line-height: 1.85; }
+.prose-grid p + p { margin-top: 14px; }
 .prose-grid code { color: var(--memory); font-family: var(--mono); }
 .evidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .evidence-card { min-height: 270px; background: var(--bench); border: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; }
